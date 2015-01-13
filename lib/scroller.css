@@ -1,0 +1,24 @@
+.cs_table {
+    display: table;
+    border-top: 1px solid black;
+    border-left: 1px solid black;
+    border-bottom: 1px solid black;
+}
+
+.cs_tr {
+    display: table-row;
+}
+
+.cs_td {
+    display: table-cell;
+    padding: 2px;
+    border-right: 1px solid black;
+}
+
+.cs_th {
+    display: table-header-group;
+}
+
+.cs_th .cs_tr .cs_td {
+    border-bottom: 1px solid black;
+}
