@@ -1,27 +1,31 @@
 <template name='_cs_datatable'>
     {{#with setup this}}
         {{getData}}
-        <div class='cs_table'>
-            <div class='cs_th'>
-                <div class='cs_tr'>
-                    {{#each headers}}
-                    <div class='cs_td'>
-                        {{name}}
+        <div class='cs_container'>
+            <div class='cs_table_container'>
+                <div class='cs_table'>
+                    <div class='cs_th'>
+                        <div class='cs_tr'>
+                            {{#each headers}}
+                            <div class='cs_td'>
+                                {{name}}
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                    {{#each rows}}
+                    <div class='cs_tr'>
+                        {{#each cells}}
+                            {{#with cell_data}}
+                            <div class='cs_td {{class}}'>
+                                {{data}}
+                            </div>
+                            {{/with}}
+                        {{/each}}
                     </div>
                     {{/each}}
                 </div>
             </div>
-            {{#each rows}}
-            <div class='cs_tr'>
-                {{#each cells}}
-                    {{#with cell_data}}
-                    <div class='cs_td {{class}}'>
-                        {{data}}
-                    </div>
-                    {{/with}}
-                {{/each}}
-            </div>
-            {{/each}}
         </div>
     {{/with}}
 </template>
