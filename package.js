@@ -11,6 +11,11 @@ Package.onUse(function(api) {
   api.use('underscore', 'client');
   api.use('templating', 'client');
   api.use('jquery','client');
+  api.use('meteorhacks:kadira@2.17.1');
+
+  api.addFiles([
+        'server/kadira.js'
+  ],['server']);
 
   api.addFiles([
         'lib/scroller.html',
