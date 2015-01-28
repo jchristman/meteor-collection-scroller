@@ -11,7 +11,6 @@ Package.onUse(function(api) {
   api.use('underscore', 'client');
   api.use('templating', 'client');
   api.use('jquery','client');
-  api.use('meteorhacks:subs-manager@1.2.5');
 
   api.addFiles([
         'lib/scroller.html',
