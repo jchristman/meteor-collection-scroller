@@ -15,9 +15,11 @@
 
 .cs_table {
     display: table;
-    border-top: 1px solid black;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
+    border: 1px solid black;
+}
+
+.cs_tbody { 
+    display: table-row-group 
 }
 
 .cs_tr {
@@ -28,6 +30,10 @@
     display: table-cell;
     padding: 2px;
     border-right: 1px solid black;
+}
+
+.cs_td:last-child {
+    border-right: none;
 }
 
 .cs_th {

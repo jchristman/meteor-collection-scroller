@@ -1,7 +1,7 @@
 <body>
     <div id='container'>
-        {{#with setColumnData}}
-            {{> CS.Datatable src='_example_collection' columns=columns sortVar='rowNum'}}
+        {{#with setup}}
+            {{> CS.Datatable src='_example_collection' sortVar='rowNum' columns=columns css=css}}
         {{/with}}
     </div>
 </body>
