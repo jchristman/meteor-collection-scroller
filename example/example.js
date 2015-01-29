@@ -16,7 +16,8 @@ if (Meteor.isClient) {
                 {
                     name : 'Row Number',
                     varName : 'rowNum',
-                    class : 'row-number custom-td'
+                    class : 'row-number custom-td',
+                    transform : exampleTransform
                 },
                 {
                     name : 'Random Data 1',
@@ -35,4 +36,10 @@ if (Meteor.isClient) {
             return _.extend(this, { columns : _columns , css : _css });
         }
     });
+
+    var exampleTransform = function(_data) {
+        var data = 'Row number: ' + _data;
+        var html = new Handlebars.SafeString(data);
+        return html;
+    }
 }
