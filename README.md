@@ -5,7 +5,12 @@ A library that uses partial subscriptions to dynamically load content from a Col
 
 The main purpose of this library is address the problem of holding *HUGE* tables in a browser's memory. There are multiple issues that make this a difficult problem, primarily the fact that the data takes a long time to transfer and then it takes up a lot of RAM on each client. This library solves this problem by keeping only a small number of documents from the collection in the client's memory at a time. The box with the scrollbar calculates its height based on the number of documents in the collection. Then, as the user scrolls, it dynamically resubscribes to a different part of the collection.
 
-This turns out to be decently smooth if you don't scroll *too* fast.
+This turns out to be decently smooth if you don't scroll *too* fast. An example that implements the below documentation can be found by checking out the example in the repository.
+
+Installation
+------------
+
+meteor add jchristman:collection-scroller
 
 Documentation
 -------------
