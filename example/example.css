@@ -20,6 +20,23 @@ body {
 
 .custom-row {
     background: #CCC;
+    width: 100%;
+}
+
+.custom-table {
+    width: calc(100% - 2px);
+}
+
+.row-number {
+    width: 30%;
+}
+
+.data-1 {
+    width: 35%;
+}
+
+.data-2 {
+    width: 35%;
 }
 
 .custom-row:nth-child(even) {

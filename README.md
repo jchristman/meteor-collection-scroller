@@ -34,7 +34,7 @@ A full description of the context variables passed to the CS.Datatable template 
 | sort          | int        | false        | Can be a 1 or -1 for ascending or descending sort. Defaults to a 1. |
 | limit         | int        | false        | The number of records to load at a time. *should* be a multiple of 4. Defaults to 80. |
 | offset        | int        | false        | The offset within the collection to start at. Defaults to 0. |
-| inclHeaders   | boolean    | false        | Whether the headers should be included. Defaults to true. |
+| inclHeaders   | boolean    | false        | Whether the headers should be included. Defaults to false. |
 
 The columns object should have the following fields in each of the "columns" objects.
 

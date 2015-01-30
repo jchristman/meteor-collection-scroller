@@ -3,9 +3,11 @@ exampleCollection = new Meteor.Collection('_example_collection');
 if (Meteor.isServer) {
     Meteor.startup(function() {
         exampleCollection.remove({});
-        for (var i = 0; i < 1000; i++) {
+        console.log('Generating large database');
+        for (var i = 0; i < 10000; i++) {
             exampleCollection.insert({ rowNum : i, data_1 : Math.random().toString(36).substring(13), data_2 : Math.random().toString(36).substring(13)});
         }
+        console.log('Done generating large database');
     });
 }
 
@@ -17,7 +19,7 @@ if (Meteor.isClient) {
                     name : 'Row Number',
                     varName : 'rowNum',
                     class : 'row-number custom-td',
-                    transform : exampleTransform
+                    transform : rowNumTransform
                 },
                 {
                     name : 'Random Data 1',
@@ -31,14 +33,15 @@ if (Meteor.isClient) {
                 }
             ];
             var _css = {
+                table_class : 'custom-table',
                 row_class : 'custom-row'
             };
             return _.extend(this, { columns : _columns , css : _css });
         }
     });
 
-    var exampleTransform = function(_data) {
-        var data = 'Row number: ' + _data;
+    var rowNumTransform = function(_data) {
+        var data = '<b>Row number: </b>' + _data;
         var html = new Handlebars.SafeString(data);
         return html;
     }
