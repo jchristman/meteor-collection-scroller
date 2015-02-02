@@ -3,11 +3,13 @@ exampleCollection = new Meteor.Collection('_example_collection');
 if (Meteor.isServer) {
     Meteor.startup(function() {
         exampleCollection.remove({});
-        console.log('Generating large database');
-        for (var i = 0; i < 10000; i++) {
-            exampleCollection.insert({ rowNum : i, data_1 : Math.random().toString(36).substring(13), data_2 : Math.random().toString(36).substring(13)});
-        }
-        console.log('Done generating large database');
+        Meteor.defer(function() {
+            console.log('Generating large database');
+            for (var i = 0; i < 10000; i++) {
+                exampleCollection.insert({ rowNum : i, data_1 : Math.random().toString(36).substring(13), data_2 : Math.random().toString(36).substring(13)});
+            }
+            console.log('Done generating large database');
+        });
     });
 }
 

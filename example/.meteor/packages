@@ -7,3 +7,4 @@
 meteor-platform
 insecure
 jchristman:collection-scroller@1.0.3_1
+tmeasday:publish-counts
