@@ -2,13 +2,19 @@
     {{#with setup this}}
         {{getData}}
         {{watchCount}}
-        <div class='cs_container'>
-            <div class='cs_table_container' style='height: {{table_pos.height}}px'>
-                <div class='cs_table {{css.table_class}}' style='position: absolute; top: {{table_pos.top}}px'>
-                    {{> _cs_datatable_table}}
+        {{#if dataExists}}
+            <div class='cs_container'>
+                <div class='cs_table_container' style='height: {{table_pos.height}}px'>
+                    <div class='cs_table {{css.table_class}}' style='position: absolute; top: {{table_pos.top}}px'>
+                        {{> _cs_datatable_table}}
+                    </div>
                 </div>
             </div>
-        </div>
+        {{else}}
+            {{#with alternateTemplate}}
+                {{> template this}}
+            {{/with}}
+        {{/if}}
     {{/with}}
 </template>
 

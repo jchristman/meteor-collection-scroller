@@ -1,8 +1,12 @@
 <body>
     <div id='container'>
         {{#with setup}}
-            {{> CS.Datatable src='_example_collection' sortVar='rowNum' columns=columns inclHeaders=true css=css}}
+            {{> CS.Datatable src='_example_collection' sortVar='rowNum' columns=columns inclHeaders=true css=css altTemplate='alt'}}
         {{/with}}
     </div>
     <div id='count'>{{getPublishedCount '_example_collection_count'}}/10000 records generated.</div>
 </body>
+
+<template name='alt'>
+Example alternate template
+</template>

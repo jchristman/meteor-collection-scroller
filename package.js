@@ -1,7 +1,7 @@
 Package.describe({
   name: 'jchristman:collection-scroller',
   summary: 'Scroll a *large* collection as if it were all downloaded at once',
-  version: '1.0.5_2',
+  version: '1.0.6',
   git: 'https://github.com/jchristman/meteor-collection-scroller'
 });
 
