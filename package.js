@@ -1,7 +1,7 @@
 Package.describe({
   name: 'jchristman:collection-scroller',
   summary: 'Scroll a *large* collection as if it were all downloaded at once',
-  version: '1.0.5_1',
+  version: '1.0.5_2',
   git: 'https://github.com/jchristman/meteor-collection-scroller'
 });
 
@@ -11,6 +11,7 @@ Package.onUse(function(api) {
   api.use('underscore', 'client');
   api.use('templating', 'client');
   api.use('jquery','client');
+  api.use('tmeasday:publish-counts@0.3.4');
 
   api.addFiles([
         'lib/scroller.html',
