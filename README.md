@@ -50,3 +50,13 @@ The optional css context object is allowed to have the following fields.
 | Fields Name | Type | Description |
 |-------------|------|-------------|
 | row\_class | String | A name of a class with which to decorate each row. |
+
+The transform function will receive two parameters: the fields from the collection as the first parameter and the entire context as the second. This lets you ignore the context if you want or access it if you need it. For example:
+
+```js
+var exampleTransform = function(data, context) {
+    return 'Modification: ' + data;
+}
+```
+
+This transform will add text before every chunk of data for whichever column uses this transform.
