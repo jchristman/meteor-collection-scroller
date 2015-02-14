@@ -1,11 +1,11 @@
 <template name='_cs_datatable'>
     {{#with setup this}}
-        {{getData}}
+        {{watchData}}
         {{watchCount}}
         {{#if dataExists}}
             <div class='cs_container'>
-                <div class='cs_table_container' style='height: {{table_pos.height}}px'>
-                    <div class='cs_table {{css.table_class}}' style='position: absolute; top: {{table_pos.top}}px'>
+                <div class='cs_table_container' style='height: {{table_height}}px'>
+                    <div class='cs_table {{css.table_class}}' style='position: absolute; top: {{table_pos}}px'>
                         {{> _cs_datatable_table}}
                     </div>
                 </div>
