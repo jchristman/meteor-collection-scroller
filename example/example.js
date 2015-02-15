@@ -37,6 +37,10 @@ if (Meteor.isClient) {
                 row_class : 'custom-row'
             };
             return _.extend(this, { columns : _columns , css : _css });
+        },
+
+        count : function() {
+            
         }
     });
 
