@@ -40,7 +40,9 @@ if (Meteor.isClient) {
         },
 
         count : function() {
-            
+            var count = _CS_Counts.findOne('_example_collection_count');
+            if (count == undefined) return 0;
+            return count.count;
         }
     });
 

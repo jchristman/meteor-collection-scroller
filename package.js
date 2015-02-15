@@ -23,7 +23,7 @@ Package.onUse(function(api) {
         'lib/collections.js'
   ],['client','server']);
 
-//  api.export([
-//        'getCollection'
-//  ],['client']);
+  api.export([
+        '_CS_Counts'
+  ],['client']);
 });
